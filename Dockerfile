@@ -20,7 +20,9 @@ EXPOSE 8080
 # will be used by attached slave agents:
 EXPOSE 50000
 
-USER jenkins
+ENV JAVA_OPTS -Xmx1024m
+ENV JENKINS_OPTS --prefix=/jenkins
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh
+RUN chmod +x /usr/local/bin/jenkins.sh
 ENTRYPOINT ["/usr/local/bin/jenkins.sh"]

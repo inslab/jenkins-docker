@@ -1,9 +1,7 @@
-FROM java:openjdk-7u65-jdk
+FROM ubuntu:14.04
 MAINTAINER Sunchan Lee <sunchanlee@inslab.co.kr>
 
-RUN apt-get update && apt-get install -y wget git curl zip && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get install gcc g++
+RUN apt-get update && apt-get install -y wget git curl zip openjdk-7-jdk gcc g++ && rm -rf /var/lib/apt/lists/*
 
 ENV JENKINS_VERSION 1.565.3
 RUN mkdir /usr/share/jenkins/

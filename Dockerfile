@@ -17,8 +17,14 @@ VOLUME /var/jenkins_home
 # for main web interface:
 EXPOSE 8080
 
+ENV AGENT_PORT 50000
+
+# for support ldap setting
+#ENV LDAP_URI
+#ENV LDAP_ROOTDN
+
 # will be used by attached slave agents:
-EXPOSE 50000
+EXPOSE ${AGENT_PORT}
 
 ENV JAVA_OPTS -Xmx1024m
 ENV JENKINS_OPTS --prefix=/jenkins

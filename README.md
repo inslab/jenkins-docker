@@ -20,7 +20,7 @@ JENKINS_OPTS : jenkins options (default : --prefix=/jenkins)
 
 LDAP_URI : LDAP server uri (ex : ldap://111.222.333.444:389)
 
-LDAP_ROOTDN : ROOT DN value for searching user accounts (ex : dc=example,dc=com)
+LDAP_BASE_DN : Base DN value for searching user accounts (ex : dc=example,dc=com)
 
 Installed build tools (compiler)
 --------------------------------

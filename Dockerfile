@@ -22,7 +22,7 @@ ENV AGENT_PORT 50000
 
 # for support ldap setting
 #ENV LDAP_URI
-#ENV LDAP_ROOTDN
+#ENV LDAP_BASE_DN
 
 # will be used by attached slave agents:
 EXPOSE ${AGENT_PORT}

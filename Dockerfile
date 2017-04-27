@@ -27,7 +27,6 @@ ENV AGENT_PORT 50000
 # will be used by attached slave agents:
 EXPOSE ${AGENT_PORT}
 
-ENV JAVA_OPTS -Xmx1024m
 ENV JENKINS_OPTS --prefix=/jenkins
 
 COPY jenkins.sh /usr/local/bin/jenkins.sh

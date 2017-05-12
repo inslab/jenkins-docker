@@ -16,10 +16,12 @@ Thread.start {
     }
 
     println "--> setting ldap authorization";
-    def ldapUri = env['LDAP_URI'];
+    def ldapHost = env['LDAP_HOST'];
+    def ldapPort = env['LDAP_PORT'];
     def baseDN = env['LDAP_BASE_DN'];
 
-    if(ldapUri != null && baseDN != null) {
+    if(ldapHost != null && ldapPort != null && baseDN != null) {
+        def ldapUri = "ldap://${ldapHost}:${ldapPort}"
         def ldap = new LDAPSecurityRealm(ldapUri, baseDN, null, null, null, null, null, false);
         if(ldap != null) instance.setSecurityRealm(ldap);
     } else {

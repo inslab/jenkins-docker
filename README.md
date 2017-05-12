@@ -18,9 +18,11 @@ JAVA_OPTS : java options to load jenkins.war
 
 JENKINS_OPTS : jenkins options (default : --prefix=/jenkins)
 
-LDAP_URI : LDAP server uri (ex : ldap://111.222.333.444:389)
+LDAP_HOST : Host of LDAP server (ex : 111.222.333.444)
 
-LDAP_BASE_DN : Base DN value for searching user accounts (ex : dc=example,dc=com)
+LDAP_PORT : Port of LDAP service
+
+LDAP_BASE_DN : Base DN (ex : dc=example,dc=co)
 
 Installed build tools (compiler)
 --------------------------------
